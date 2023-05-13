@@ -1,0 +1,59 @@
+# # -> for comment (must be the first char in the line)
+# the first line of information has a number indicate [nb of types]
+# the second line [floor tex], [ceil tex]
+# walls: [W] [char] [NO tex] [SO tex] [WE tex] [EA tex]
+# doors: [D] [char] [tex]
+# sprites: [S] [char] [list of tex, ...]
+# elements can be separated by one or more space(s).
+# each type can be separated by one or more empty line(s).
+# only png or xpm extension are allowed for the texture
+# forbidden char {N S W E 0}
+# map has to be surrounded by ones
+# player is represented by [N|S|W|E]
+# empty space represented by 0
+#	 N
+# W		 E
+# 	 S
+# 89 id char are allowed -> ascii[33, 126] - {NSWE0}
+
+---start---
+w_1 resources/assets/wall_1.png
+w_2 resources/assets/wall_2.png
+w_3 resources/assets/wall_3.png
+w_4 resources/assets/wall_4.png
+sky resources/assets/sky_1.xpm
+flr resources/assets/floor_1.xpm
+d_1 resources/assets/door01.xpm
+d_s resources/assets/door_side_01.xpm
+
+---start---
+#floor and ceil.
+F sky flr
+
+#Walls
+W 1 w_1 w_2 w_3 w_4
+W 2 w_1 d_s w_1 w_1
+W 3 d_s w_1 w_1 w_1
+W 4 w_1 w_1 d_s w_1
+W 5 w_1 w_1 w_1 d_s
+
+# door
+D d d_1 d_s
+
+# sprite
+S s w_1 w_2 w_3
+
+#MAP
+---start---
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 3 0 0 0 3 0 0 0 0 0 3 0 0 0 3 0 0 0 0 0 0 3 0 0 0 3 0 0 1 1 1 1 1 1 1 1 1 1 1
+1 0 E 0 d 0 0 0 d 0 0 0 0 0 d 0 0 0 d 0 0 0 0 0 0 d 0 0 0 d 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 2 0 0 0 2 0 0 0 0 0 2 0 0 0 2 0 0 0 0 0 0 2 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 3 0 0 0 3 0 0 0 0 0 3 0 0 0 3 0 0 0 0 0 0 3 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 d 0 0 0 d 0 0 0 0 0 d 0 0 0 d 0 0 0 0 0 0 d 0 0 0 d 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 2 0 0 0 2 0 0 0 0 0 2 0 0 0 2 0 0 0 0 0 0 2 0 0 0 2 0 0 1 1 1 1 1 1 1 1 1 1 1
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1

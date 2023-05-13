@@ -1,0 +1,44 @@
+
+---start---
+w_1 resources/assets/wall_1.png
+w_2 resources/assets/wall_2.png
+w_3 resources/assets/wall_3.png
+w_4 resources/assets/wall_4.png
+
+sky resources/assets/wall_1.xpm
+flr resources/assets/wall_2.xpm
+ds_1 resources/assets/door_side_01.xpm
+ds_2 resources/assets/door_side_04.xpm
+dr_1 resources/assets/door01.xpm
+dr_2 resources/assets/door04.xpm
+brmile resources/assets/sprite_1.xpm
+bola resources/assets/sprite_2.xpm
+9rtasa resources/static/bullet/1.xpm
+
+---start---
+#floor and ceil.
+
+#Walls
+W 1 w_1 w_2 w_3 w_4
+W 2 w_1 w_2 w_3 w_4
+F sky flr
+
+# door
+D d dr_1 ds_1
+D o dr_2 ds_2
+
+S y brmile
+S 9 9rtasa
+
+Q n bola
+
+#MAP
+---start---
+11111111111111
+10000000000001
+10111111111101
+101        101
+101        101
+10111111111101
+1000000000N001
+11111111111111
